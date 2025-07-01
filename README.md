@@ -1,59 +1,70 @@
-# MarkdownViewer
+# Markdown Viewer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+**심플하고 세련된 UI의 실시간 Markdown 미리보기 웹앱**  
+Angular + Tailwind CSS 기반, GitHub Pages로 배포되는 SPA
 
-## Development server
+---
 
-To start a local development server, run:
+## ✨ 주요 특징
 
-```bash
-ng serve
-```
+- **실시간 미리보기**: 입력과 동시에 Markdown이 렌더링되어 바로 확인 가능
+- **Happy Utils 스타일**: 카드형 메인, 연한 배경, 라운드/그림자 등 세련된 Tailwind UI
+- **반응형 레이아웃**: PC/모바일 모두 쾌적하게 사용 가능
+- **외부 스크롤 없음**: 입력/미리보기 영역만 내부 스크롤
+- **경량/빠른 로딩**: 불필요한 의존성 없이 빠른 SPA
+- **GitHub Pages 배포 최적화**: `/docs` 산출물, 자동 postbuild 스크립트 적용
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🚀 데모
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **[실시간 데모 바로가기](https://today-self-study.github.io/markdown-viewer/)**
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ 기술 스택
 
-```bash
-ng generate --help
-```
+- [Angular](https://angular.io/) (Standalone, v17+)
+- [Tailwind CSS v3](https://tailwindcss.com/)
+- [marked](https://github.com/markedjs/marked) (Markdown 파서)
+- [TypeScript](https://www.typescriptlang.org/)
+- GitHub Actions/gh-pages (배포 자동화)
 
-## Building
+---
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🏗️ 빌드 및 배포
 
 ```bash
-ng test
+# 1. 빌드 (산출물: /docs)
+npm run build
+
+# 2. GitHub Pages 배포
+gh-pages -d docs
 ```
 
-## Running end-to-end tests
+- 빌드 후 `/docs`에 SPA 산출물이 생성됩니다.
+- postbuild 스크립트로 `/docs/browser` → `/docs` 자동 복사/정리됨.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
+## 📁 폴더 구조
+
+```
+markdown-viewer/
+  ├─ src/
+  │   ├─ app/
+  │   └─ ...
+  ├─ docs/           # 빌드 산출물 (index.html 등)
+  ├─ package.json
+  └─ angular.json
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 📝 라이선스
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- MIT License
+
+---
+
+**문의/기여/스타 언제든 환영합니다!**

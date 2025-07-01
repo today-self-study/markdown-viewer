@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#3B82F6"/>
+  <text x="50%" y="54%" text-anchor="middle" font-size="36" font-family="Segoe UI, Arial, sans-serif" fill="white" font-weight="bold" dy="0.1em">M</text>
+  <polyline points="40,44 46,50 56,36" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> 
