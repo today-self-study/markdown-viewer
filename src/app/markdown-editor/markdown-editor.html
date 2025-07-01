@@ -3,8 +3,10 @@
     class="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-8 rounded-none md:rounded-none border-r border-b md:border-b-0 border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none text-base font-mono bg-white shadow-none transition-all"
     [(ngModel)]="markdown"
     placeholder="여기에 Markdown을 입력하세요..."
+    style="position:relative; z-index:20;"
   ></textarea>
-  <div class="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-8 rounded-none md:rounded-none border-l border-t md:border-t-0 border-gray-200 bg-white shadow-none overflow-auto prose max-w-none">
+  <div class="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-8 rounded-none md:rounded-none border-l border-t md:border-t-0 border-gray-200 bg-white shadow-none overflow-auto prose max-w-none"
+    style="position:relative; z-index:10;">
     <div [innerHTML]="renderedMarkdown"></div>
   </div>
 </div>
