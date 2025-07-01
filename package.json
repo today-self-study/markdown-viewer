@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:markdown-viewer": "node dist/markdown-viewer/server/server.mjs"
+    "serve:ssr:markdown-viewer": "node dist/markdown-viewer/server/server.mjs",
+    "postbuild": "copy docs\\browser\\* docs\\ /Y & rmdir /s /q docs\\browser"
   },
   "prettier": {
     "overrides": [
@@ -38,6 +39,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^20.0.4",
     "@angular/build": "^20.0.4",
     "@angular/cli": "^20.0.4",
     "@angular/compiler-cli": "^20.0.0",
